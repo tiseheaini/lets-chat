@@ -1,3 +1,12 @@
+## 0.4.0
+
+Enhancements
+
+* Private and password-protected rooms
+* Private 1-to-1 chat between XMPP users
+* Giphy image search
+* @all mentions are highlighted for everyone
+
 ## 0.3.12 (2015-05-19)
 
 Fixes
