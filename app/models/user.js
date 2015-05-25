@@ -40,15 +40,7 @@ var UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: false, // Only required if local
-        trim: true,
-        match: new RegExp(settings.auth.local.passwordRegex),
-        set: function(value) {
-            // User can only change their password if it's a local account
-            if (this.local) {
-                return value;
-            }
-            return this.password;
-        }
+        trim: true
     },
     token: {
         type: String,
@@ -57,17 +49,17 @@ var UserSchema = new mongoose.Schema({
     },
     firstName: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     lastName: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     username: {
         type: String,
-        required: true,
+        required: false,
         trim: true,
         lowercase: true,
         unique: true,
@@ -75,7 +67,7 @@ var UserSchema = new mongoose.Schema({
     },
     displayName: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     joined: {
