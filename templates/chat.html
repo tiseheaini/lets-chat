@@ -28,7 +28,7 @@
         <section class="lcb-sidebar">
             <div class="dropdown">
                 <a class="lcb-account-button dropdown-toggle" data-toggle="dropdown" href="3">
-                    <img class="lcb-account-button-avatar lcb-avatar" src="https://gravatar.com/avatar/<$ account.avatar $>?s=50" />
+                    <img class="lcb-account-button-avatar lcb-avatar" src="http://avatar.iqunix.com/users/avatar?email=<$ account.email $>" />
                     <span class="lcb-account-button-name"><$ account.displayName $></span>
                     <span class="lcb-account-button-username">@<$ account.username $></span>
                     <i class="lcb-account-button-chevron fa fa-chevron-down"></i>
@@ -61,8 +61,9 @@
                             <i class="fa fa-fw fa-lock"></i> Auth tokens
                         </a>
                     </li>
-                    <li class="divider"></li>
-                    <li><a href="./logout"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li>
+                    <!-- 删除 logout 接口 -->
+                    <!-- <li class="divider"></li> -->
+                    <!-- <li><a href="./logout"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li> -->
                 </ul>
             </div>
             <div class="lcb-status-indicators">
