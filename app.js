@@ -77,7 +77,7 @@ auth.setup(app, session, core);
 
 // Security protections
 app.use(helmet.crossdomain());
-app.use(helmet.frameguard('allow-from', 'http://test.tuandui.im'));
+app.use(helmet.frameguard('allow-from', 'http://tuandui.im'));
 app.use(helmet.hidePoweredBy());
 app.use(helmet.ieNoOpen());
 app.use(helmet.noSniff());
