@@ -26,46 +26,12 @@
             <div class="lcb-header-logo">Let's Chat</div>
         </div>
         <section class="lcb-sidebar">
-            <div class="dropdown">
-                <a class="lcb-account-button dropdown-toggle" data-toggle="dropdown" href="3">
-                    <img class="lcb-account-button-avatar lcb-avatar" src="http://avatar.iqunix.com/users/avatar?email=<$ account.email $>" />
-                    <span class="lcb-account-button-name"><$ account.displayName $></span>
-                    <span class="lcb-account-button-username">@<$ account.username $></span>
-                    <i class="lcb-account-button-chevron fa fa-chevron-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                    <li>
-                        <a data-toggle="modal" href="#lcb-profile">
-                            <i class="fa fa-fw fa-edit"></i> Edit Profile
-                        </a>
-                    </li>
-                    <li>
-                        <a data-toggle="modal" href="#lcb-account">
-                            <i class="fa fa-fw fa-cogs"></i> Account Settings
-                        </a>
-                    </li>
-                    <li>
-                        <a data-toggle="modal" href="#lcb-notifications">
-                            <i class="fa fa-fw fa-bell"></i> Notifications
-                        </a>
-                    </li>
-                    <% if settings.xmpp.enable %>
-                        <li>
-                            <a data-toggle="modal" href="#lcb-xmpp">
-                                <i class="fa fa-fw fa-comments"></i> XMPP/Jabber
-                            </a>
-                        </li>
-                    <% endif %>
-                    <li>
-                        <a data-toggle="modal" href="#lcb-tokens">
-                            <i class="fa fa-fw fa-lock"></i> Auth tokens
-                        </a>
-                    </li>
-                    <!-- 删除 logout 接口 -->
-                    <!-- <li class="divider"></li> -->
-                    <!-- <li><a href="./logout"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li> -->
-                </ul>
+            <div class="lcb-account-button">
+                <img class="lcb-account-button-avatar lcb-avatar" src="http://avatar.iqunix.com/users/avatar?email=<$ account.email $>" />
+                <span class="lcb-account-button-name"><$ account.displayName $></span>
+                <span class="lcb-account-button-username">@<$ account.username $></span>
             </div>
+
             <div class="lcb-status-indicators">
                 <span class="lcb-status-indicator lcb-status-indicator-error lcb-status-connection" data-status="disconnected" style="display: none;">
                     <i class="fa fa-plug"></i> Disconnected
@@ -89,7 +55,7 @@
             <div class="lcb-rooms-browser lcb-pane hide" data-id="list">
                 <header class="lcb-rooms-browser-header">
                     <h2 class="lcb-rooms-browser-heading">
-                        All Rooms
+                        所有房间
                     </h2>
                     <div class="lcb-rooms-browser-filter">
                         <label class="lcb-rooms-browser-filter-label" for="lcb-rooms-browser-filter-input">

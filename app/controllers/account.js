@@ -33,30 +33,33 @@ module.exports = function() {
         });
     });
 
-    app.get('/login', function(req, res) {
-        var imagePath = path.resolve('media/img/photos');
-        var images = fs.readdirSync(imagePath);
-        var image = _.chain(images).filter(function(file) {
-            return /\.(gif|jpg|jpeg|png)$/i.test(file);
-        }).sample().value();
-        res.render('login.html', {
-            photo: image,
-            auth: auth.providers
-        });
-    });
+    // 删除 login
+    //app.get('/login', function(req, res) {
+        //var imagePath = path.resolve('media/img/photos');
+        //var images = fs.readdirSync(imagePath);
+        //var image = _.chain(images).filter(function(file) {
+            //return /\.(gif|jpg|jpeg|png)$/i.test(file);
+        //}).sample().value();
+        //res.render('login.html', {
+            //photo: image,
+            //auth: auth.providers
+        //});
+    //});
 
-    app.get('/logout', function(req, res ) {
-        req.session.destroy();
-        res.redirect('/login');
-    });
+    // 删除 logout
+    //app.get('/logout', function(req, res ) {
+        //req.session.destroy();
+        //res.redirect('/login');
+    //});
 
     app.post('/account/login', function(req, res) {
         req.io.route('account:login');
     });
 
-    app.post('/account/register', function(req, res) {
-        req.io.route('account:register');
-    });
+    // 删除 account/register
+    //app.post('/account/register', function(req, res) {
+        //req.io.route('account:register');
+    //});
 
     app.get('/account', middlewares.requireLogin, function(req, res) {
         req.io.route('account:whoami');
