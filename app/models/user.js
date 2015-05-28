@@ -64,7 +64,8 @@ var UserSchema = new mongoose.Schema({
         trim: true,
         lowercase: true,
         unique: true,
-        match: /^[^\.][a-z0-9_\.]+[^\.]$/i
+        // 修改特殊符号的验证，最少允许 username 为2个字符
+        match: /^[^\.][a-z0-9_\.]*[^\.]$/i
     },
     displayName: {
         type: String,
