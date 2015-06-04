@@ -45,6 +45,11 @@ files:
     - 'image/jpeg'
     - 'image/png'
     - 'image/gif'
+    - 'application/postscript'
+    - 'image/vnd.adobe.photoshop'
+    - 'application/msword'
+    - 'application/x-rar-compressed'
+    - 'application/zip'
   local:
     dir: uploads
 
